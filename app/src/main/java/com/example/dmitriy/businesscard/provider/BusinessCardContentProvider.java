@@ -24,7 +24,7 @@ public class BusinessCardContentProvider extends ContentProvider {
 
         SQLiteDatabase db = m_Helper.getReadableDatabase();
 
-        Cursor cursor = db.query(ContactsTable.TABLE_NAME, projection, selection, selectionArgs, null, null,sortOrder);
+        Cursor cursor = db.query(ContactsTable.TABLE_NAME, projection, selection, selectionArgs, null, null,"name");
 
         return cursor;
     }

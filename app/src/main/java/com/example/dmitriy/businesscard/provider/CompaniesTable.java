@@ -16,6 +16,6 @@ public class CompaniesTable implements BaseColumns{
     public static Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + TABLE_NAME);
 
     public static String COLUMN_NAME = "name";
-    public static String COLUMN_Type = "type";
-    public static String COLUMN_Label = "label";
+    public static String COLUMN_TYPE = "type";
+    public static String COLUMN_LABEL = "label";
 }
