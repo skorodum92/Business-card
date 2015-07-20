@@ -5,6 +5,12 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+
+import com.example.dmitriy.businesscard.R;
 
 /**
  * Created by Dmitriy on 06.07.2015.
@@ -54,3 +60,4 @@ public class BusinessCardContentProvider extends ContentProvider {
         return 0;
     }
 }
+

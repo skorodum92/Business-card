@@ -4,13 +4,16 @@ import android.content.ContentValues;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.dmitriy.businesscard.provider.ContactsTable;
 
 /**
  * Created by Dmitriy on 06.07.2015.
  */
+
 public class AddContactActivity extends ActionBarActivity {
 
     @Override
@@ -18,6 +21,14 @@ public class AddContactActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_contact_layout);
 
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.title, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(adapter);
     }
 
     public void acceptContact(View sender) {
